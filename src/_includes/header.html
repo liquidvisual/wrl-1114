@@ -30,10 +30,33 @@
             </div>
         </form>
 
-        <p><span class="phone"><i class="fa fa-phone"></i> <a href="tel:{{ settings.phone }}"></a>{{ settings.phone }}<br>
-        <span class="address">{{ settings.address }}</span></p>
+        <p><span class="phone"><i class="fa fa-phone"></i> <a href="tel:{{ settings.phone }}">{{ settings.phone }}</a><br>
+        <span class="address"><a target="_blank" href="https://www.google.com.au/maps/place/{{ site.data.settings.address }}/">{{ site.data.settings.address }}</a></span></p>
     </div>
 </div>
 
 <!-- Important: Hamburger outside of row -->
 <a href="#" class="hamburger hide-for-large-up"><span>OPEN MENU</span></a>
+
+<!-- HERO -->
+<div class="hero">
+    <div class="row outer-row">
+        <div class="columns">
+            <div class="animated fadeInLeft">
+                {% include banner.html %}
+            </div>
+        </div> <!-- .columns -->
+    </div> <!-- .row -->
+</div> <!-- .hero -->
+
+<!-- NAVIGATION -->
+<nav class="navigation show-for-large-up">
+    <div class="row collapse outer-row">
+        <div class="columns">
+            <div class="topbar">
+                {% include navigation.html %}
+            </div>
+        </div>
+    </div>
+</nav> <!-- .navigation -->
+

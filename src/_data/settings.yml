@@ -1,9 +1,9 @@
 # GLOBAL SITE SETTINGS
 
 # General
-seo_title: ""
-title: ""
-company: ""
+seo_title: "Wilckens Roche"
+title: "Wilckens Roche PTY LTD"
+company: "Wilckens Roche PTY LTD"
 logo: "/img/content/logo.jpg"
 description: ""
 
@@ -11,10 +11,15 @@ description: ""
 email: test@example.com
 phone: (05) 555 555
 fax: (05) 555 555
-address: "ABC Street, Earth"
+address: "43 Ferguson Street Williamstown VIC 3016"
+address_multiline: "43 Ferguson Street<br>Williamstown VIC 3016"
+dx: "DX 16101, Williamstown"
+pobox: "18<br>Williamstown VIC 3016"
 
 # Social Networks
-facebook: ""
+facebook: "http://www.facebook.com/pages/Wilckens-Roche-Lawyers/193138314034665"
+twitter: "https://twitter.com/#!/WilckensRoche"
+linkedin: "http://www.linkedin.com/company/2491031?goback=%2Efcs_GLHD_wilckens+roche_false_*2_*2_*2_*2_*2_*2_*2_*2_*2_*2_*2_*2&trk=ncsrch_hits"
 
 # Google Map
 google_map: ""

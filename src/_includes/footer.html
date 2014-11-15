@@ -1,4 +1,52 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <h1>test</h1>
 =======
 >>>>>>> parent of 85a32ce... adding changes
+=======
+{% assign isos = site.data.isos[0] %}
+<div class="row">
+	<div class="medium-6 large-8 columns small-text-center medium-text-left">
+		<ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-4">
+			<li>
+				<p>Office Location:<br>
+				<a target="_blank" href="https://www.google.com.au/maps/place/{{ site.data.settings.address }}/">{{ site.data.settings.address_multiline }}</a><br>
+				{{ site.data.settings.dx }}
+				</p>
+			</li>
+			<li>
+				Email: <a href="mailto:{{ site.data.settings.email }}">{{ site.data.settings.email }}</a><br>
+				Fax: {{ site.data.settings.fax }}<br>
+				P.O. Box: {{ site.data.settings.pobox }}
+			</li>
+			<li class="hide-for-small hide-for-medium">
+			{% include navigation.html %}
+			</li>
+			<li class="hide-for-small hide-for-medium">
+			{% include navigation.html %}
+			</li>
+		</ul>
+		<p><ul class="inline-list">
+			<li>Connect with Us:</li>
+			<li><a href="{{ site.data.settings.linkedin }}" class="button round" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+			<li><a href="{{ site.data.settings.twitter }}" class="button round" target="_blank"><i class="fa fa-twitter"></i></a></li>
+			<li><a href="{{ site.data.settings.facebook }}" class="button round" target="_blank"><i class="fa fa-facebook"></i></a></li>
+		</ul>
+		</p>
+		<p>We also speak: Hungarian</p>
+	</div>
+	<div class="medium-6 large-4 columns">
+		<ul class="inline-list right">
+		{% for iso in isos.children %}
+			<li><a href="{{ isos.url }}#{{ iso.id }}"><img src="{{ iso.image }}" alt="{{ iso.title }}"></a></li>
+		{% endfor %}
+		</ul>
+	</div>
+</div>
+<div class="row">
+	<div class="columns">
+		<p>&copy; 2014 - {{ site.data.settings.company }}. All rights reserved.<br>
+			<a target="_blank" href="http://www.firmsite.com.au/">Firmsite</a> by <a target="_blank" href="http://www.findlaw.com.au/">Findlaw</a></p>
+	</div>
+</div>
+>>>>>>> master
