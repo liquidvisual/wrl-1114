@@ -1,0 +1,9 @@
+- title: ISO Accreditations
+  url: /iso-accreditations/
+  children:
+    - title: Legal Best Practice Law 9000
+      id: legalbestpractice
+      image: /img/content/icon-certified-law9000.gif
+    - title: Quality ISO 9001:2008
+      id: qualityiso
+      image: /img/content/icon-certified-iso9001.gif
