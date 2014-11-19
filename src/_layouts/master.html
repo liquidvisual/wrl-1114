@@ -43,6 +43,17 @@
 
             <header class="header">{% include header.html %}</header>
 
+            <!-- NAVIGATION -->
+            <nav class="navigation show-for-large-up">
+                <div class="topbar">
+                    <div class="row">
+                        <div class="columns">
+                            {% include navigation.html %}
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
             <main class="main">{{ content }}</main>
 
             <footer class="footer">{% include footer.html %}</footer>

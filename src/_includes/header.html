@@ -12,14 +12,14 @@
         </a>
     </div>
     <div class="medium-6 columns text-center medium-text-right">
-           
+
         <form data-abide novalidate method="get" action="/search/">
             <div class="row">
                 <div class="medium-8 medium-offset-4 columns">
 
                     <div class="row collapse postfix-radius">
                         <div class="small-10 columns">
-                            <input type="text" name="q" id="q">
+                            <input type="text" name="q" id="q" placeholder="Search Site">
                         </div>
                         <div class="small-2 columns">
                             <button class="button postfix"><i class="fa fa-search"></i></button>
@@ -30,8 +30,12 @@
             </div>
         </form>
 
-        <p><span class="phone"><i class="fa fa-phone"></i> <a href="tel:{{ settings.phone }}">{{ settings.phone }}</a><br>
-        <span class="address"><a target="_blank" href="https://www.google.com.au/maps/place/{{ site.data.settings.address }}/">{{ site.data.settings.address }}</a></span></p>
+        <p><a class="phone" href="tel:{{ settings.phone }}"><i class="fa fa-phone"></i> {{ settings.phone }}</a><br>
+
+        <a class="address" target="_blank" href="https://www.google.com.au/maps/place/{{ site.data.settings.address }}/">
+            {{ site.data.settings.address }}
+        </a>
+
     </div>
 </div>
 
@@ -39,17 +43,17 @@
 <a href="#" class="hamburger hide-for-large-up"><span>OPEN MENU</span></a>
 
 <!-- HERO -->
-<div class="hero">
+<!-- <div class="hero">
     <div class="row outer-row">
         <div class="columns">
             <div class="animated fadeInLeft">
                 {% include banner.html %}
             </div>
-        </div> <!-- .columns -->
-    </div> <!-- .row -->
-</div> <!-- .hero -->
+        </div>
+    </div>
+</div>  -->
 
-<!-- NAVIGATION -->
+<!-- NAVIGATION
 <nav class="navigation show-for-large-up">
     <div class="row collapse outer-row">
         <div class="columns">
@@ -58,5 +62,5 @@
             </div>
         </div>
     </div>
-</nav> <!-- .navigation -->
+</nav> .navigation -->
 

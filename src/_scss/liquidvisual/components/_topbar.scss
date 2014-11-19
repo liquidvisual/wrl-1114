@@ -1,0 +1,211 @@
+/*
+    LIQUIDVISUAL TOPBAR :: A Personal Framework
+
+    - updated: 14.11.14
+    - liquidvisual.com
+
+    - Notes -
+    - Requires Modernizr
+*/
+//-----------------------------------------------------------------
+// Variables
+//-----------------------------------------------------------------
+
+
+//-----------------------------------------------------------------
+// Variables
+//-----------------------------------------------------------------
+
+.topbar {
+    z-index: 1;
+    width: 100%;
+}
+
+.topbar ul {
+    // margin-bottom: 0;
+
+    // background: red;
+    margin: 0;
+    // margin-left: 2%;
+    // padding-bottom: rem-calc(10);
+    // padding-bottom: rem-calc(4);
+
+    @media #{$medium-up} {
+        width: 100%;
+        display: table;
+        font-size: rem-calc(14);
+        // text-align: center;
+    }
+
+    @media #{$xlarge-up} {
+        font-size: rem-calc(17);
+    }
+}
+
+.topbar li {
+    display: table-cell;
+    vertical-align: middle;
+
+    @media #{$xlarge-up} {
+
+    }
+}
+
+// .topbar li.has-dropdown a:after {
+//     content: "\f0d7";
+//     font-family: "FontAwesome";
+//     padding-left: rem-calc(5);
+// }
+
+.topbar a {
+    @extend .transition;
+    display: block;
+    text-align: center;
+    padding: rem-calc(10 15);
+    color: #222;//$body-font-color;
+}
+
+.topbar a:active,
+.topbar .active > a {
+    // background: darken($secondary-color, 10%);
+    background: #EFEEEE;
+    // border-radius: $global-radius;
+    border-bottom: 2px solid $primary-color;
+}
+
+.no-touch .topbar a:hover {
+    // background: #222;
+    background: #DCDBDB;
+    // background: rgba(0, 0, 0, .5);
+}
+
+//=========================================
+// Nested Dropdowns
+//=========================================
+
+.topbar .has-dropdown:hover > a {
+    background: #DCDBDB;
+}
+
+/* UX decision, dropdowns are fiddly on tablets */
+.no-touch .topbar .has-dropdown:hover > .dropdown {
+    opacity: 1;
+    height: auto;
+    overflow: visible;
+}
+
+.no-touch .topbar .dropdown .has-dropdown:hover > .dropdown {
+    opacity: 1;
+    height: auto;
+}
+
+.topbar .dropdown {
+    @extend .transition;
+    display: block;
+    position: absolute;
+    opacity: 0;
+    height: 0; // so hit areas aren't triggered
+    overflow: hidden; // so hit areas aren't triggered
+    top: 100%;
+    left: auto;
+    width: rem-calc(300);
+    background: #DCDBDB;
+    margin: 0;
+}
+
+/* Third level nesting */
+.topbar .dropdown .dropdown {
+    position: absolute;
+    top: 0;
+    left: 100%;
+}
+
+.topbar .dropdown li {
+    position: relative;
+    float: none;
+    display: block;
+}
+
+.topbar .dropdown a {
+    border-top: 1px solid #D3D2D2;
+    margin: 0;
+    text-align: left;
+}
+
+.topbar .dropdown li:last-child a {
+    border-bottom: 0;
+}
+
+.topbar .dropdown a:hover {
+    background: #DC203E;
+    color: white;
+}
+
+//=========================================
+// Hamburger
+//=========================================
+
+.hamburger {
+    position: absolute;
+    // visibility: hidden;
+    // top: 50%;
+    bottom: rem-calc(10);
+    right: rem-calc(15);
+    display: block;
+    width: rem-calc(28);
+    height: rem-calc(24);
+    z-index: 2;
+
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+
+    @media #{$medium-up} {
+        right: rem-calc(30);
+    }
+}
+
+.hamburger:before,
+.hamburger:after,
+.hamburger span {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: rem-calc(4);
+    background: #201E1F;
+}
+.hamburger:before {
+    top: 0;
+}
+.hamburger:after {
+    bottom: 0;
+}
+.hamburger span {
+    top: 50%;
+    margin-top: rem-calc(-2);
+}
+
+html.mm-opening .hamburger:before,
+html.mm-opening .hamburger:after {
+    display: none;
+}
+
+//-----------------------------------------------------------------
+// Transitions
+//-----------------------------------------------------------------
+
+.transition {
+    -webkit-transition: all .2s linear;
+       -moz-transition: all .2s linear;
+         -o-transition: all .2s linear;
+        -ms-transition: all .2s linear;
+            transition: all .2s linear;
+
+    -webkit-transition-property: opacity, color, background;
+       -moz-transition-property: opacity, color, background;
+         -o-transition-property: opacity, color, background;
+        -ms-transition-property: opacity, color, background;
+            transition-property: opacity, color, background;
+}

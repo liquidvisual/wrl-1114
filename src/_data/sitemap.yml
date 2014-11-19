@@ -1,0 +1,26 @@
+- title: Home
+  url: /
+
+- title: About Us
+  url: /about-us/
+
+- title: Legal Services
+  url: /legal-services/
+
+- title: Our Team
+  url: /our-team/
+  include_children_in_nav: false
+  children:
+    - title: Service One
+      url: /services/service-one/
+    - title: Service Two
+      url: /services/service-two/
+
+- title: Faqs
+  url: /faqs/
+
+- title: Resources
+  url: /resources/
+
+- title: Contact
+  url: /contact/
