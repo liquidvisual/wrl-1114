@@ -41,24 +41,18 @@
     <div class="lv-super developerX">
         <div class="lv-page">
 
-            <!-- HEADER -->
-            <header class="header">
-                {% include header.html %}
-            </header>
+            <header class="header">{% include header.html %}</header>
 
-            {{ content }}
+            <main class="main">{{ content }}</main>
 
-            <!-- FOOTER -->
-            <footer class="footer">
-                {% include footer.html %}
-            </footer>
+            <footer class="footer">{% include footer.html %}</footer>
 
         </div> <!-- .lv-page -->
     </div> <!-- .lv-super -->
 
     <!-- OFF-CANVAS MENU -->
     <nav id="off-canvas-menu" class="hide" aria-hidden="true">
-        {% include navigation.html %}
+{% include navigation.html %}
     </nav>
 
     <!--[if lt IE 9]>
