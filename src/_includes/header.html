@@ -4,11 +4,12 @@
 {% endcomment %}
 
 {% assign settings = site.data.settings %}
+{% assign logo = "/img/content/logo@2x.png" %}
 
-<div class="row outer-row">
+<div class="row">
     <div class="medium-6 columns text-center medium-text-left">
         <a class="logo" href="/" title="{{ settings.seo_title }}" itemprop="url">
-        	<img src="{{ settings.logo }}" alt="{{ settings.company_title }}" itemprop="logo">
+        	<img width="240" src="{{ logo }}" alt="{{ settings.company_title }}" itemprop="logo">
         </a>
     </div>
     <div class="medium-6 columns text-center medium-text-right">
@@ -40,27 +41,4 @@
 </div>
 
 <!-- Important: Hamburger outside of row -->
-<a href="#" class="hamburger hide-for-large-up"><span>OPEN MENU</span></a>
-
-<!-- HERO -->
-<!-- <div class="hero">
-    <div class="row outer-row">
-        <div class="columns">
-            <div class="animated fadeInLeft">
-                {% include banner.html %}
-            </div>
-        </div>
-    </div>
-</div>  -->
-
-<!-- NAVIGATION
-<nav class="navigation show-for-large-up">
-    <div class="row collapse outer-row">
-        <div class="columns">
-            <div class="topbar">
-                {% include navigation.html %}
-            </div>
-        </div>
-    </div>
-</nav> .navigation -->
-
+<!-- <a href="#" class="hamburger hide-for-large-up"><span>OPEN MENU</span></a> -->

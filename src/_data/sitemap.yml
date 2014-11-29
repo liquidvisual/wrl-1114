@@ -3,24 +3,86 @@
 
 - title: About Us
   url: /about-us/
+  include_children_in_nav: false
+  children:
+    - title: Our Clients
+      url: /about-us/our-clients/
+    - title: Why Choose Us?
+      url: /about-us/why-choose-us/
+    - title: Quality Assurance
+      url: /about-us/quality-assurance/
+    - title: Community Involvement
+      url: /about-us/community-involvement/
+    - title: Health and Safety
+      url: /about-us/health-and-safety/
+    - title: ISO Accreditations
+      url: /about-us/iso-accreditations/
 
 - title: Legal Services
   url: /legal-services/
+  include_children_in_nav: false
+  children:
+    - title: Business Sales
+      url: /legal-services/business-sales/
+    - title: Family Law
+      url: /legal-services/family-law/
+    - title: Commercial Litigation
+      url: /legal-services/commercial-litigation/
+    - title: Conveyancing
+      url: /legal-services/conveyancing/
+    - title: Criminal and Traffic Law
+      url: /legal-services/criminal-and-traffic-law/
+    - title: Debt Collection
+      url: /legal-services/debt-collection/
+    - title: Employment Law/
+      url: /legal-services/employment-law/
+    - title: Intellectual transition-property
+      url: /legal-services/intellectual-property/
+    - title: Powers of Attorney
+      url: /legal-services/powers-of-attorney/
+    - title: Wills and Estates
+      url: /legal-services/wills-and-estates/
 
 - title: Our Team
   url: /our-team/
   include_children_in_nav: false
   children:
-    - title: Service One
-      url: /services/service-one/
-    - title: Service Two
-      url: /services/service-two/
+    - title: Les Kohegyi
+      url: /our-team/les-kohegyi/
+    - title: Robert Tebbs
+      url: /our-team/robert-tebbs/
+    - title: Geoff King
+      url: /our-team/geoff-king/
+    - title: Jennifer Eichler
+      url: /our-team/jennifer-eichler/
 
 - title: Faqs
   url: /faqs/
+  include_children_in_nav: false
+  children:
+    - title: Small Business Law
+      url: /faqs/small-business-law/
+    - title: Conveyancing
+      url: /faqs/conveyancing/
+    - title: Criminal Law
+      url: /faqs/criminal-law/
+    - title: Employment Law
+      url: /faqs/employment-law/
+    - title: Wills & Estates
+      url: /faqs/wills-and-estates/
 
 - title: Resources
   url: /resources/
+  include_children_in_nav: false
+  children:
+  - title: Law Talk
+    url: /resources/law-talk/
+  - title: Articles
+    url: /resources/articles/
+  - title: Media
+    url: /resources/media/
+  - title: Legislation
+    url: /resources/legislation/
 
-- title: Contact
-  url: /contact/
+- title: Contact Us
+  url: /contact-us/

@@ -1,0 +1,14 @@
+- caption: "We'll be there"
+  caption_align: "right"
+  url: /about-us/
+  image: "/img/content/banner-1.jpg"
+
+- caption: "We'll sort you out today"
+  caption_align: "left"
+  url: ""
+  image: "/img/content/banner-2.jpg"
+
+- caption: "Sample"
+  caption_align: "left"
+  url: ""
+  image: "/img/content/banner-3.jpg"

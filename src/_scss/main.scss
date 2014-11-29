@@ -1,13 +1,20 @@
 @import "foundation/settings";
+@import "hero";
+@import "mixins";
+@import "foundation-icons";
 /*
     MAIN.CSS
 
-    - Last updated: 00.00.00
+    - Last updated: 29.11.14
     - hello@liquidvisual.com
 */
 //-----------------------------------------------------------------
 // Variables
 //-----------------------------------------------------------------
+
+$dark-grey: #282828;
+$light-grey: #F3F4F4;
+
 //-----------------------------------------------------------------
 // Foundation Overrides (Hacks)
 //-----------------------------------------------------------------
@@ -24,31 +31,19 @@ html, body {
 // Tells grid to "snap" into each breakpoint.
 // Removes issue of seeing elements super large
 // before falling into place naturally.
-//
-// Notes:
-// 5.000em = 80 (page-padding * 2)
-// Using EMs because media queries in Foundation do so
 //=========================================
 
-// .row {
-// 	@media #{$medium-up}  { max-width: upper-bound($medium-range)  + 5.000em; }
-// 	@media #{$large-up}   { max-width: upper-bound($large-range)   + 5.000em; }
-// 	@media #{$xlarge-up}  { max-width: upper-bound($xlarge-range)  + 5.000em; }
-// 	@media #{$xxlarge-up} { max-width: upper-bound($xxlarge-range) + 5.000em; }
-// }
+.row {
+	@media #{$medium-up}  { max-width: upper-bound($medium-range);  }
+	@media #{$large-up}   { max-width: upper-bound($large-range);   }
+	@media #{$xlarge-up}  { max-width: upper-bound($xlarge-range);  }
+	@media #{$xxlarge-up} { max-width: upper-bound($xxlarge-range); }
+}
 
-// Add side padding to the page above small
-// .outer-row {
-// 	@media #{$medium-up} {
-// 		padding-left: $page-padding - $column-gutter / 2;
-// 		padding-right: $page-padding - $column-gutter / 2;
-// 	}
-// }
-
-// Ensure images scale to block grid LIs */
-// ul[class*='block-grid'] li img {
-// 	width: 100%;
-// }
+// Ensure images scale to block grid LIs
+ul[class*='block-grid'] li img {
+	width: 100%;
+}
 
 //-----------------------------------------------------------------
 // lv-super: top-most non-visual wrapper | lv-page: visual wrapper
@@ -60,9 +55,14 @@ html, body {
     top: 0;
     left: 0;
     width: 100%;
-    height: 246px;
-    background: #810126;
+    height: rem-calc(246);
+    background: $primary-color url(../img/template/header-bg.gif) no-repeat top center;
     z-index: -1;
+
+    -webkit-background-size: cover;
+       -moz-background-size: cover;
+         -o-background-size: cover;
+            background-size: cover;
 }
 
 //-----------------------------------------------------------------
@@ -73,12 +73,23 @@ html, body {
     padding-top: rem-calc(26);
 
     .logo {
+        position: relative;
         display: inline-block;
         margin-bottom: rem-calc(20);
+
+        @media #{$medium-up} {
+            top: rem-calc(25);
+        }
     }
 
     .phone {
         color: white;
+        font-weight: bold;
+        font-size: rem-calc(22);
+
+        &:hover {
+            color: black;
+        }
     }
 
     .address {
@@ -90,8 +101,19 @@ html, body {
 // Navigation
 //-----------------------------------------------------------------
 
-.navigation {
+.navigation ul {
     background: #EFEEEE;
+
+    background: rgb(255,255,255);
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNkMWQxZDEiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+    background: -moz-linear-gradient(top,  rgba(255,255,255,1) 0%, rgba(209,209,209,1) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,1)), color-stop(100%,rgba(209,209,209,1)));
+    background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(209,209,209,1) 100%);
+    background: -o-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(209,209,209,1) 100%);
+    background: -ms-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(209,209,209,1) 100%);
+    background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(209,209,209,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#d1d1d1',GradientType=0 );
+
 }
 
 //-----------------------------------------------------------------
@@ -100,45 +122,117 @@ html, body {
 //-----------------------------------------------------------------
 // Hero
 //-----------------------------------------------------------------
+
+.lv-hero-module {
+    -moz-box-shadow: 0px -3px 9px 3px rgba(0,0,0,0.09);
+    box-shadow: 0px -3px 9px 3px rgba(0,0,0,0.09);
+}
+
 //-----------------------------------------------------------------
 // Breadcrumbs
 //-----------------------------------------------------------------
+
+.lv-breadcrumbs {
+    text-transform: capitalize;
+}
+
 //-----------------------------------------------------------------
 // Content
 //-----------------------------------------------------------------
+
+.white-page {
+    background: white;
+    padding: rem-calc(30);
+    margin-bottom: rem-calc(30);
+}
+
 //-----------------------------------------------------------------
 // Sections
 //-----------------------------------------------------------------
 //-----------------------------------------------------------------
 // Media Object
 //-----------------------------------------------------------------
+
+.media-tile {
+    margin-bottom: rem-calc(20);
+    border-bottom: 1px solid #ECECEC;
+
+    @media #{$medium-up} {
+        background: $light-grey;
+        padding: rem-calc(15);
+        border: 0;
+    }
+}
+
 //-----------------------------------------------------------------
 // Modules
 //-----------------------------------------------------------------
 //-----------------------------------------------------------------
 // Sidebar
 //-----------------------------------------------------------------
+
+.side-nav a {
+    background: $light-grey;
+    border-radius: $global-radius;
+    color: #222;
+}
+
+.lv-super .side-nav .active a {
+    background: $secondary-color;
+
+    &:hover {
+        background: $secondary-color;
+    }
+}
+
 //-----------------------------------------------------------------
 // Footer
 //-----------------------------------------------------------------
 
 .footer {
-    padding: rem-calc(30 0 0 0);
+
     background: #282828;
+    background: $secondary-color;
     color: white;
 
+    -moz-box-shadow: inset 0px 3px 9px 3px rgba(0,0,0,0.02);
+    box-shadow: inset 0px 3px 9px 3px rgba(0,0,0,0.02);
+
+    .footer-top {
+        padding: rem-calc(30 0 20 0);
+
+        @media #{$medium-up} {
+            padding: rem-calc(30 0 0 0);
+        }
+    }
+
     h1, h2, h3, h4, h5, h6 {
-        color: white;
+        // color: white;
+    }
+
+    li {
+        margin-bottom: rem-calc(5);
     }
 
     a {
-        // color: white;
+        color: white;
+
+        &:hover {
+            color: black;
+        }
     }
 }
 
 .footer-bottom {
-    padding: rem-calc(20 0);
-    background: #000000;
+    padding: rem-calc(15 0);
+    // background: #000000;
+    background: #282828;
+    color: grey;
+
+    a {
+        color: $primary-color;
+    }
+
     p, ul {
         font-size: rem-calc(12);
         margin-bottom: 0;
@@ -148,9 +242,39 @@ html, body {
 //-----------------------------------------------------------------
 // Social Networks
 //-----------------------------------------------------------------
+
+.social-networks a {
+    background: white;
+    color: $dark-grey;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 100%;
+    font-size: rem-calc(22);
+
+    &:hover {
+        background: $primary-color;
+        color: white;
+    }
+}
+
 //-----------------------------------------------------------------
 // Template Buttons
 //-----------------------------------------------------------------
+
+.header .button {
+    background: $secondary-color;
+
+    &:hover {
+        background: black;
+    }
+}
+
+a {
+    @include transition();
+}
+
 //-----------------------------------------------------------------
 // Forms
 //-----------------------------------------------------------------
@@ -158,23 +282,16 @@ html, body {
 // Animations
 //-----------------------------------------------------------------
 
-.transition {
-	-webkit-transition: all .2s linear;
-	   -moz-transition: all .2s linear;
-	     -o-transition: all .2s linear;
-	    -ms-transition: all .2s linear;
-	        transition: all .2s linear;
 
-	-webkit-transition-property: opacity, color, background;
-	   -moz-transition-property: opacity, color, background;
-	     -o-transition-property: opacity, color, background;
-	    -ms-transition-property: opacity, color, background;
-            transition-property: opacity, color, background;
-}
 
 //-----------------------------------------------------------------
 // Special / Misc - Refactor Later
 //-----------------------------------------------------------------
+
+.main ul li {
+    margin-bottom: rem-calc(14);
+}
+
 //-----------------------------------------------------------------
 // IE8
 //-----------------------------------------------------------------
@@ -182,6 +299,9 @@ html, body {
 // Themes
 //-----------------------------------------------------------------
 
+
+
 //=========================================
 //
 //=========================================
+

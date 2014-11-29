@@ -3,20 +3,43 @@ layout: master
 slide_show: false
 ---
 
-<div class="internal">
+<!-- HERO -->
+<div class="row">
+    <div class="columns">
+       <!-- HERO MODULE -->
+       <div class="lv-hero-module has-fixed-height">
+           <!-- Hero Item -->
+           <div class="lv-hero" style="background-image: url('{{ page.banner_image | prepend: site.assets }}')" data-background-image="..."></div> <!-- .lv-hero -->
+       </div> <!-- .lv-hero-module -->
+    </div>
+</div>
 
-    <!-- BREADCRUMBS -->
-    <nav class="breadcrumbs-bar">
-        <div class="row collapse outer-row">
+<!-- NAVIGATION -->
+<nav class="navigation show-for-medium-up">
+    <div class="topbar">
+        <div class="row">
             <div class="columns">
-                {% include breadcrumbs.html %}
-            </div> <!-- .columns -->
-        </div> <!-- .row -->
-    </nav> <!-- .breadcrumbs-wrapper -->
+                {% include snippets/navigation.html %}
+            </div>
+        </div>
+    </div>
+</nav>
 
-    <!-- CONTENT -->
-    <div class="row outer-row">
-        {{ content }}
-    </div> <!-- .row -->
+<div class="row">
+    <div class="columns">
+        <div class="white-page">
 
-</div> <!-- .internal -->
+            <!-- BREADCRUMBS -->
+            <nav class="breadcrumbs-bar">
+                <div class="row">
+                    <div class="columns">
+                        {% include snippets/breadcrumbs.html %}
+                    </div> <!-- .columns -->
+                </div> <!-- .row -->
+            </nav> <!-- .breadcrumbs-wrapper -->
+
+            {{ content }}
+
+        </div> <!-- .white-page -->
+    </div> <!-- .columns -->
+</div> <!-- .row -->

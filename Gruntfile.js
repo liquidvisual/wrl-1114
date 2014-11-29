@@ -25,7 +25,7 @@ module.exports = function (grunt) {
       dist: 'dist',
       assets: 'dist/assets',
       port: '9292',
-      git: 'git@github.com:USERNAME/REPO_NAME.git',
+      git: 'git@github.com:liquidvisual/wrl-1114.git',
       // IMPORTANT: Set a baseurl on line 364
     },
     //-----------------------------------------------------
@@ -476,8 +476,8 @@ module.exports = function (grunt) {
     //'check',
     //'test',
     'build',
-    'buildcontrol:master'
-    //'buildcontrol:pages',
+    //'buildcontrol:master'
+    'buildcontrol:pages',
     ]);
 
   //=======================================

@@ -2,14 +2,23 @@
 layout: internal
 ---
 
-<!-- MAIN -->
-<div class="medium-8 columns">
-    <main class="main">
-        {{ content}}
-    </main>
-</div>
+<div class="row">
 
-<!-- SIDEBAR -->
-<div class="medium-4 columns">
-    <!-- { % include sidebar.html % } -->
+    <!-- SIDEBAR -->
+    <div class="medium-4 medium-push-8 columns">
+        <aside class="sidebar">
+            {% include snippets/side_nav.html %}
+        </aside>
+        <p><a href="/contact-us"><img width="100%" src="/img/template/need-advice.jpg" alt="Need Advice"></a></p>
+    </div>
+
+    <!-- MAIN -->
+    <div class="medium-8 medium-pull-4 columns">
+        <main class="main">
+            <h1>{{ page.title }}</h1>
+            <br>
+            {{ content}}
+        </main>
+    </div>
+
 </div>
