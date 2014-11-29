@@ -1,7 +1,7 @@
 /*
     LIQUIDVISUAL TOPBAR :: A Personal Framework
 
-    - updated: 14.11.14
+    - updated: 29.11.14
     - liquidvisual.com
 
     - Notes -
@@ -37,8 +37,12 @@
         // text-align: center;
     }
 
+    @media #{$large-up} {
+        table-layout: fixed;
+    }
+
     @media #{$xlarge-up} {
-        font-size: rem-calc(17);
+        font-size: rem-calc(14);
     }
 }
 
@@ -68,7 +72,8 @@
 .topbar a:active,
 .topbar .active > a {
     // background: darken($secondary-color, 10%);
-    background: #EFEEEE;
+    // background: #EFEEEE;
+    background: rgba(0,0,0,0.1);
     // border-radius: $global-radius;
     border-bottom: 2px solid $primary-color;
 }

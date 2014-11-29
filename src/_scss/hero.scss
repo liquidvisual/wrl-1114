@@ -37,6 +37,7 @@ $hero-carousel-bullet-size: 12px;
 .lv-hero-module {
     overflow: hidden;
     height: auto;
+    margin-bottom: 0;
 
     &.has-auto-height {
         height: auto;

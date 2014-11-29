@@ -5,16 +5,41 @@ slide_show: true
 ---
 
 {% assign settings = site.data.settings %}
+{% assign sitemap = site.data.sitemap %}
 
 <div class="homepage">
 
-	<!-- MAIN -->
-	<main class="main">
-		<div class="row outer-row">
-			<div class="columns">
+    <div class="row">
+        <div class="columns">
 
-			</div> <!-- .columns -->
-		</div> <!-- .row -->
-	</main>
+        	<!-- MAIN -->
+        	<main class="main">
+                <div class="row">
 
+                    <div class="medium-4 columns">
+                        <h4>{{ settings.title }}</h4>
+                        <div class="media-tile">
+                            {{ content }}
+                        </div>
+                    </div>
+
+                    <div class="medium-4 columns">
+                        <h4>Latest Legal News</h4>
+                    </div>
+
+                    <div class="medium-4 columns">
+                        <h4>Our Legal Services</h4>
+                        <div class="media-tile">
+                            <ul>
+                                {% for item in sitemap[2].children %}
+                                <li><a href="{{ item.url }}">{{ item.title }}</a></li>
+                                {% endfor %}
+                            </ul>
+                        </div> <!-- .media-tile -->
+                    </div>
+                </div>
+
+	       </main>
+        </div> <!-- .columns -->
+    </div> <!-- .row -->
 </div> <!-- .homepage -->
