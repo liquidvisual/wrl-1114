@@ -19,11 +19,11 @@ $hero-height: rem-calc(215);
 $hero-background-attachment: inherit;
 
 // Captions
-$hero-caption-header-font-family: inherit;
+$hero-caption-header-font-family: 'Nothing You Could Do';
 $hero-caption-header-font-size: rem-calc(25);
 $hero-caption-header-font-size-medium: rem-calc(30);
-$hero-caption-paragraph-font-size: auto;
-$hero-caption-color: white;
+$hero-caption-paragraph-font-size: rem-calc(25);
+$hero-caption-color: $primary-color;
 
 // Carousel
 $hero-carousel-bullet-size: 12px;
@@ -41,6 +41,10 @@ $hero-carousel-bullet-size: 12px;
 
     &.has-auto-height {
         height: auto;
+    }
+
+    &.has-fixed-height {
+        height: $hero-height;
     }
 
     @media #{$medium-up} {
@@ -96,12 +100,13 @@ $hero-carousel-bullet-size: 12px;
     margin: rem-calc(20 0);
     padding: rem-calc(10 10 10 15);
     text-align: center;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    //text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 
     h1, h2, h3, h4, h5, h6 {
         line-height: 1.2;
         font-family: $hero-caption-header-font-family;
         font-size: $hero-caption-header-font-size; /* mobile */
+        font-weight: bold;
 
         @media #{$medium-up} {
             font-size: $hero-caption-header-font-size-medium; /* mobile */

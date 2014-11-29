@@ -7,39 +7,67 @@ slide_show: true
 {% assign settings = site.data.settings %}
 {% assign sitemap = site.data.sitemap %}
 
-<div class="homepage">
+<!-- HERO -->
+<div class="row">
+    <div class="columns">
+       {% include hero.html %}
+    </div>
+</div>
 
-    <div class="row">
-        <div class="columns">
+<!-- NAVIGATION -->
+<nav class="navigation show-for-medium-up">
+    <div class="topbar">
+        <div class="row">
+            <div class="columns">
+                {% include snippets/navigation.html %}
+            </div>
+        </div>
+    </div>
+</nav>
+
+<div class="row">
+    <div class="columns">
+        <div class="white-page">
 
         	<!-- MAIN -->
         	<main class="main">
-                <div class="row">
+                <div class="row" data-equalizer>
 
-                    <div class="medium-4 columns">
+                    <div class="large-4 columns">
                         <h4>{{ settings.title }}</h4>
-                        <div class="media-tile">
+                        <div class="media-tile" data-equalizer-watch>
                             {{ content }}
                         </div>
                     </div>
 
-                    <div class="medium-4 columns">
+                    <div class="large-4 columns">
                         <h4>Latest Legal News</h4>
+                        <div class="media-tile" data-equalizer-watch>
+                            <ul class="no-bullet">
+                                {% for i in (1..5) %}
+                                <li>
+                                    <div>26/11/2014</div>
+                                    <a href="#">Director of Ella Rouge Beauty pleads guilty to criminal charges</a>
+                                </li>
+                                {% endfor %}
+                            </ul>
+                        </div>
                     </div>
 
-                    <div class="medium-4 columns">
+                    <div class="large-4 columns">
                         <h4>Our Legal Services</h4>
-                        <div class="media-tile">
+                        <div class="media-tile" data-equalizer-watch>
                             <ul>
                                 {% for item in sitemap[2].children %}
                                 <li><a href="{{ item.url }}">{{ item.title }}</a></li>
                                 {% endfor %}
                             </ul>
+                            <p><a href="/contact-us/"></a><img src="/img/template/need-advice.jpg" alt="Need Advice?"></p>
                         </div> <!-- .media-tile -->
                     </div>
                 </div>
 
-	       </main>
-        </div> <!-- .columns -->
-    </div> <!-- .row -->
-</div> <!-- .homepage -->
+           </main>
+        </div> <!-- .white-page -->
+    </div> <!-- .columns -->
+</div> <!-- .row -->

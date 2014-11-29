@@ -35,7 +35,7 @@
         {% endunless %}
 
         {% comment %} Second Level {% endcomment %}
-        {% for item in sitemap[side_nav_id].children | limit: 1 %}
+        {% for item in sitemap[side_nav_id].children %}
             <li class="{% if item.url == page.url %} active {% endif %}">
                 <a href="{{ item.url }}">{{ item.title }}</a>
             </li>
