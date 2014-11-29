@@ -1,6 +1,7 @@
 @import "foundation/settings";
 @import "hero";
 @import "mixins";
+@import "foundation-icons";
 /*
     MAIN.CSS
 
@@ -153,8 +154,14 @@ ul[class*='block-grid'] li img {
 //-----------------------------------------------------------------
 
 .media-tile {
-    background: $light-grey;
-    padding: rem-calc(15);
+    margin-bottom: rem-calc(20);
+    border-bottom: 1px solid #ECECEC;
+
+    @media #{$medium-up} {
+        background: $light-grey;
+        padding: rem-calc(15);
+        border: 0;
+    }
 }
 
 //-----------------------------------------------------------------
@@ -172,6 +179,10 @@ ul[class*='block-grid'] li img {
 
 .lv-super .side-nav .active a {
     background: $secondary-color;
+
+    &:hover {
+        background: $secondary-color;
+    }
 }
 
 //-----------------------------------------------------------------
@@ -179,13 +190,21 @@ ul[class*='block-grid'] li img {
 //-----------------------------------------------------------------
 
 .footer {
-    padding: rem-calc(30 0 0 0);
+
     background: #282828;
     background: $secondary-color;
     color: white;
 
     -moz-box-shadow: inset 0px 3px 9px 3px rgba(0,0,0,0.02);
     box-shadow: inset 0px 3px 9px 3px rgba(0,0,0,0.02);
+
+    .footer-top {
+        padding: rem-calc(30 0 20 0);
+
+        @media #{$medium-up} {
+            padding: rem-calc(30 0 0 0);
+        }
+    }
 
     h1, h2, h3, h4, h5, h6 {
         // color: white;

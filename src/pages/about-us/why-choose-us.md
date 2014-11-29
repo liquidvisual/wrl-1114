@@ -1,8 +1,9 @@
 ---
 layout: text_page
-title: About
+title: Why Choose Us?
 permalink: /about-us/why-choose-us/
 banner_image: "/img/content/about-banner.jpg"
+side_nav_id: 1
 ---
 
 In a word - **'quality'**. Wilckens Roche brings together a highly-experienced, well qualified and respected team of legal practitioners, with expertise in a number of legal fields.  Our lawyers provide personal service, attention to detail and timely advice. When you come to Wilckens Roche we will:

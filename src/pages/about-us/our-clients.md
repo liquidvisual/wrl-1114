@@ -3,6 +3,7 @@ layout: text_page
 title: Our Clients
 permalink: /about-us/our-clients/
 banner_image: "/img/content/about-banner.jpg"
+side_nav_id: 1
 ---
 
 Wilckens Roche has the experience, talent and proven results to help our clients seize opportunities, overcome obstacles and accomplish their business goals.  The key to our success is **relationships**.

@@ -3,6 +3,7 @@ layout: text_page
 title: Community Involvement
 permalink: /about-us/community-involvement/
 banner_image: "/img/content/about-banner.jpg"
+side_nav_id: 1
 ---
 
 Wilckens Roche has a long history of involvement in the local community and in February 2009 became a proud sponsor of the Williamstown Football Club.

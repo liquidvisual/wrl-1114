@@ -1,8 +1,9 @@
 ---
 layout: text_page
-title: About
+title: About Us
 permalink: /about-us/
 banner_image: "/img/content/about-banner.jpg"
+side_nav_id: 1
 ---
 
 ## Our History

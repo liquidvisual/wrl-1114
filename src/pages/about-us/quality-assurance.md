@@ -1,8 +1,9 @@
 ---
 layout: text_page
-title: About
+title: Quality Assurance
 permalink: /about-us/quality-assurance/
 banner_image: "/img/content/about-banner.jpg"
+side_nav_id: 1
 ---
 
 Wilckens Roche is Williamstown's only legal practice certified to the international standard ISO 9001:2000 and LAW 9000 for the design, development, production and servicing of its products and services.  LAW 9000 was launched in June 2004 after being developed through a partnership of QL Inc and SAI Global, with the NSW Law Society and the College of Law.

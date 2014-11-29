@@ -3,6 +3,7 @@ layout: text_page
 title: Iso Accreditations
 permalink: /about-us/iso-accreditations/
 banner_image: "/img/content/about-banner.jpg"
+side_nav_id: 1
 ---
 
 ## Legal Best Practice Law 9000
