@@ -24,10 +24,13 @@
 
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl }}">
 
+    <!-- CDN -->
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700">
+
     <!-- build:css({src,.tmp}) /assets/css/optimized.css -->
     <link rel="stylesheet" href="/_bower_components/animate.css/animate.min.css">
+    <link rel="stylesheet" href="/_bower_components/slick.js/slick/slick.css">
     <link rel="stylesheet" href="/_bower_components/font-awesome/css/font-awesome.css">
-
     <link rel="stylesheet" href="/css/foundation/app.css">
     <link rel="stylesheet" href="/css/liquidvisual/liquidvisual.css">
     <link rel="stylesheet" href="/css/main.css">
@@ -46,12 +49,19 @@
                 {% include header.html %}
             </header>
 
+            <!-- HERO -->
+            <div class="row">
+                <div class="columns">
+                   {% include hero.html %}
+                </div>
+            </div>
+
             <!-- NAVIGATION -->
             <nav class="navigation show-for-large-up">
                 <div class="topbar">
                     <div class="row">
                         <div class="columns">
-                            {% include navigation.html %}
+                            {% include snippets/navigation.html %}
                         </div>
                     </div>
                 </div>
@@ -69,7 +79,7 @@
 
     <!-- OFF-CANVAS MENU -->
     <nav id="off-canvas-menu" class="hide" aria-hidden="true">
-        {% include navigation.html %}
+        {% include snippets/navigation.html %}
     </nav>
 
     <!--[if lt IE 9]>
@@ -89,6 +99,7 @@
     <script src="/_bower_components/foundation/js/foundation/foundation.js"></script>
     <script src="/_bower_components/magnific-popup/dist/jquery.magnific-popup.min.js"></script>
     <script src="/_bower_components/nprogress/nprogress.js"></script>
+    <script src="/_bower_components/slick.js/slick/slick.js"></script>
     <script src="/scripts/main.js"></script>
     <!-- endbuild -->
 
@@ -122,10 +133,9 @@
 
     <script>
         $(document).foundation();
-        $("#off-canvas-menu").mmenu({ "offCanvas": { "position": "right" }});
     </script>
 
-    {% include google_analytics.html %}
+    <!-- Google Analytics Here -->
 
     <!-- No Javascript Warning -->
     <noscript>

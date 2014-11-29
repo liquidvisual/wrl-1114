@@ -22,6 +22,37 @@ $(window).load(function() {
 // window.onload = function(){
 //     // NProgress.done();
 // }
+
+//-----------------------------------------------------------------
+// Carousel
+//-----------------------------------------------------------------
+
+$('#lv-hero-carousel').slick({
+    autoplay: false,
+    autoplaySpeed: 8000,
+    // dots: true,
+    infinite: true,
+    speed: 500,
+    // fade: true,
+    slide: '.lv-hero',
+    cssEase: 'linear',
+    responsive: [
+        {
+          breakpoint: 640,
+          settings: {
+            autoplay: false,
+            swipe: false
+          }
+        }
+      ]
+});
+
+//-----------------------------------------------------------------
+// Off Canvas Menu
+//-----------------------------------------------------------------
+
+$("#off-canvas-menu").mmenu({ "offCanvas": { "position": "right" }});
+
 //-----------------------------------------------------------------
 // Kickstart Foundation / Touch Conditionals
 //-----------------------------------------------------------------

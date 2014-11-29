@@ -4,4 +4,4 @@ title: Home
 permalink: /
 ---
 
-<!--- This child document initializes the page in Jekyll. -->
+<!-- This child document initializes the page in Jekyll. -->

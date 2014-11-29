@@ -1,4 +1,5 @@
 {% assign isos = site.data.isos[0] %}
+{% assign settings = site.data.settings %}
 
 <div class="row">
 	<div class="medium-8 large-8 columns text-center medium-text-left">
@@ -7,19 +8,19 @@
 				<h5>Office Location</h5>
 				<p>
 					<a target="_blank" href="https://www.google.com.au/maps/place/{{ site.data.settings.address }}/">
-					{{ site.data.settings.address_multiline }}
+					{{ settings.address_multiline }}
 					</a>
 					<br>
-					{{ site.data.settings.dx }}
+					{{ settings.dx }}
 				</p>
 			</li>
 			<li>
 				<h5>Email</h5>
 				<p>
-					<a href="mailto:{{ site.data.settings.email }}">{{ site.data.settings.email }}</a>
+					<a href="mailto:{{ settings.email }}">{{ site.data.settings.email }}</a>
 					<br>
-					Fax: {{ site.data.settings.fax }}<br>
-					P.O. Box: {{ site.data.settings.pobox }}
+					Fax: {{ settings.fax }}<br>
+					P.O. Box: {{ settings.pobox }}
 				</p>
 			</li>
 			<li class="hide-for-small hide-for-medium">
@@ -39,9 +40,9 @@
 		</ul>
 		<h5>Connect With Us</h5>
 		<ul class="lv-inline-list text-center medium-text-left">
-			<li><a href="{{ site.data.settings.linkedin }}" class="button round" target="_blank"><i class="fa fa-linkedin"></i></a></li>
-			<li><a href="{{ site.data.settings.twitter }}" class="button round" target="_blank"><i class="fa fa-twitter"></i></a></li>
-			<li><a href="{{ site.data.settings.facebook }}" class="button round" target="_blank"><i class="fa fa-facebook"></i></a></li>
+			<li><a href="{{ settings.linkedin }}" class="button round" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+			<li><a href="{{ settings.twitter }}" class="button round" target="_blank"><i class="fa fa-twitter"></i></a></li>
+			<li><a href="{{ settings.facebook }}" class="button round" target="_blank"><i class="fa fa-facebook"></i></a></li>
 		</ul>
 		<p>We also speak: Hungarian</p>
 	</div>
@@ -60,7 +61,7 @@
 <div class="footer-bottom">
 	<div class="row">
 		<div class="medium-6 columns text-center medium-text-left">
-			<p>&copy; 2014 - {{ site.data.settings.company }}. All rights reserved.<br>
+			<p>&copy; 2014 - {{ settings.company }}. All rights reserved.<br>
 				<a target="_blank" href="http://www.firmsite.com.au/">Firmsite</a> by <a target="_blank" href="http://www.findlaw.com.au/">Findlaw</a></p>
 		</div>
 		<div class="medium-6 columns">

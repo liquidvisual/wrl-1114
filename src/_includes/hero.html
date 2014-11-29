@@ -1,0 +1,30 @@
+{% assign hero_images = site.data.carousel_slides %}
+
+<!-- HERO MODULE -->
+<div id="lv-hero-carousel" class="lv-hero-module">
+
+    {% for hero in hero_images %}
+
+    <!-- Hero Item -->
+    <div class="lv-hero" style="background-image: url('{{ hero.image | prepend: site.assets }}')" data-background-image="...">
+        <div class="row lv-vertical-center">
+
+            <!-- Left / Right caption alignment -->
+            {% if hero.caption_align == "left" %}
+                <div class="medium-5 text-center columns">
+                <div class="lv-hero-caption animated">
+            {% else %}
+                <div class="medium-7 medium-offset-5 text-center columns">
+                <div class="lv-hero-caption animated">
+            {% endif %}
+
+                    <h1>{{ hero.caption }}</h1>
+                </div> <!-- .lv-hero-caption -->
+            </div> <!-- .columns -->
+
+        </div> <!-- .row -->
+    </div> <!-- .lv-hero -->
+
+    {% endfor %}
+
+</div> <!-- .lv-hero-module -->
