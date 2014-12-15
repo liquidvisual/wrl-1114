@@ -1,0 +1,39 @@
+---
+layout: internal
+---
+
+{% assign settings = site.data.settings %}
+
+<div class="row">
+    <div class="columns">
+        <h1>{{ page.title }}</h1>
+        <br>
+        <div class="row">
+            <div class="medium-6 columns">
+                <h3>Office Address</h3>
+                {{ settings.address | markdownify }}
+
+                <h3>Postal Address</h3>
+                {{ settings.pobox | markdownify }}
+            </div>
+            <div class="medium-6 columns">
+                <h3>Direct</h3>
+                <p>
+                    Phone: <a href="{{ settings.phone }}">{{ settings.phone }}</a><br>
+                    Fax: <a href="{{ settings.fax }}">{{ settings.fax }}</a><br>
+                    Email: <a href="{{ settings.email }}">{{ settings.email }}<br><br></a>
+                    {{ settings.dx }}</p>
+            </div>
+        </div>
+    </div>
+</div>
+<br>
+
+<div class="row">
+    <div class="large-6 columns">
+        {% include snippets/simple_form.html %}
+    </div>
+    <div class="large-6 columns">
+        <p class="polaroid"><img src="http://www.wrl.com.au/media/723/map.gif" alt=""></p>
+    </div>
+</div>

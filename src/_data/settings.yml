@@ -7,13 +7,13 @@ company: "Wilckens Roche PTY LTD"
 description: "Wilckens Roche is Williamstown's oldest law firm and one of the oldest law firms in the western suburbs of Melbourne. A quality-assured incorporated legal practice, call us now."
 
 # Contact Info
-email: test@example.com
-phone: (05) 555 555
-fax: (05) 555 555
+email: info@wrl.com.au
+phone: (03) 8383 5999
+fax: (03) 8383 5900
 address: "43 Ferguson Street Williamstown VIC 3016"
 address_multiline: "43 Ferguson Street<br>Williamstown VIC 3016"
 dx: "DX 16101, Williamstown"
-pobox: "18<br>Williamstown VIC 3016"
+pobox: "P.O. Box 18<br>Williamstown VIC 3016"
 
 # Social Networks
 facebook: "http://www.facebook.com/pages/Wilckens-Roche-Lawyers/193138314034665"
