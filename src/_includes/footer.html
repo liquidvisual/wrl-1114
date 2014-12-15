@@ -16,7 +16,7 @@
 					</p>
 				</li>
 				<li>
-					<h5>Email</h5>
+					<h5>Contact</h5>
 					<p>
 						<i class="fi-mail"></i>&nbsp; <a href="mailto:{{ settings.email }}">{{ settings.email }}</a>
 						<br>
@@ -24,7 +24,7 @@
 						<i class="fi-marker"></i>&nbsp; P.O. Box {{ settings.pobox }}
 					</p>
 				</li>
-				<li>
+				<li class="show-for-medium-up">
 					<h5>Site Index</h5>
 					<ul class="no-bullet">
 						{% for item in site.data.sitemap %}

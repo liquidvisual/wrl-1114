@@ -1,7 +1,7 @@
 {% assign hero_images = site.data.carousel_slides %}
 
 <!-- HERO MODULE -->
-<div id="lv-hero-carousel" class="lv-hero-module">
+<div id="lv-hero-carousel" class="lv-hero-module show-for-medium-up">
 
     {% for hero in hero_images %}
 
@@ -17,8 +17,7 @@
                 <div class="medium-7 medium-offset-5 text-center columns">
                 <div class="lv-hero-caption animated">
             {% endif %}
-
-                    <h1>{{ hero.caption }}</h1>
+                    {{ hero.caption | markdownify }}
                 </div> <!-- .lv-hero-caption -->
             </div> <!-- .columns -->
 

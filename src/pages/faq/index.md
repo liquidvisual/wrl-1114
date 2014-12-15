@@ -1,7 +1,7 @@
 ---
 layout: text_page
-title: FAQs
-permalink: /faqs/
+title: FAQ
+permalink: /faq/
 banner_image: "/img/content/faqs-banner.jpg"
 side_nav_id: 4
 ---

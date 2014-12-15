@@ -48,41 +48,27 @@
   include_children_in_nav: false
   children:
     - title: Les Kohegyi
-      url: /our-team/les-kohegyi/
+      url: "/our-team/person/"
     - title: Robert Tebbs
-      url: /our-team/robert-tebbs/
+      url: "/our-team/person/#2"
     - title: Geoff King
-      url: /our-team/geoff-king/
+      url: "/our-team/person/#3"
     - title: Jennifer Eichler
-      url: /our-team/jennifer-eichler/
+      url: "/our-team/person/#4"
 
-- title: Faqs
-  url: /faqs/
+- title: FAQ
+  url: /faq/
   include_children_in_nav: false
   children:
-    - title: Small Business Law
-      url: /faqs/small-business-law/
-    - title: Conveyancing
-      url: /faqs/conveyancing/
-    - title: Criminal Law
-      url: /faqs/criminal-law/
-    - title: Employment Law
-      url: /faqs/employment-law/
-    - title: Wills & Estates
-      url: /faqs/wills-and-estates/
+    - title: Articles
+      url: /faq/articles/
 
 - title: Resources
   url: /resources/
   include_children_in_nav: false
   children:
-  - title: Law Talk
-    url: /resources/law-talk/
-  - title: Articles
-    url: /resources/articles/
-  - title: Media
-    url: /resources/media/
-  - title: Legislation
-    url: /resources/legislation/
+    - title: Articles
+      url: /resources/articles/
 
 - title: Contact Us
   url: /contact-us/

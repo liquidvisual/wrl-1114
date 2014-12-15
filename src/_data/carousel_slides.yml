@@ -1,14 +1,11 @@
 - caption: "We'll be there"
   caption_align: "right"
-  url: /about-us/
   image: "/img/content/banner-1.jpg"
 
-- caption: "We'll sort you out today"
+- caption: "We'll help you get there"
   caption_align: "left"
-  url: ""
   image: "/img/content/banner-2.jpg"
 
-- caption: "Sample"
+- caption: "We look after you"
   caption_align: "left"
-  url: ""
   image: "/img/content/banner-3.jpg"

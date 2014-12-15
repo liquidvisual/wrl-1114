@@ -48,7 +48,7 @@
 
 .topbar li {
     display: table-cell;
-    vertical-align: middle;
+    vertical-align: top;
 
     @media #{$xlarge-up} {
 
@@ -153,8 +153,8 @@
 .hamburger {
     position: absolute;
     // visibility: hidden;
-    // top: 50%;
-    bottom: rem-calc(10);
+    top: rem-calc(50);
+    // bottom: rem-calc(10);
     right: rem-calc(15);
     display: block;
     width: rem-calc(28);
@@ -179,7 +179,7 @@
     left: 0;
     width: 100%;
     height: rem-calc(4);
-    background: #201E1F;
+    background: black;
 }
 .hamburger:before {
     top: 0;

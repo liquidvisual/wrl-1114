@@ -1,5 +1,6 @@
 ---
 layout: internal
+side_nav_id: 3
 ---
 
 {% assign settings = site.data.settings %}
@@ -20,25 +21,29 @@ layout: internal
             <h1>{{ page.title }}</h1>
             <br>
 
-            {% for i in (1..4) %}
             <article class="media">
                 <div class="row">
 
                     <div class="medium-3 columns">
-                        <!-- Imagegen: max-width=256 -->
-                        <p><img width="100%" class="polaroid" src="/img/ui/no-face.png" alt="..."></p>
+                        <p><img class="polaroid" src="/img/ui/no-face.png" alt=""></p>
                     </div> <!-- .medium-3 -->
 
                     <div class="medium-9 columns">
-                        <h3>John Smith <small>Managing Partner</small></h3>
-                        <p><strong>P </strong>(02) 5555 5555<strong><br>E </strong><a href="mailto:mail@yourdomain.com.au">mail@yourdomain.com.au</a></p>
-                        <a class="button tiny radius" href="/our-team/person/">View Profile</a>
+                        <h3 class="subheader">Managing Partner</h3>
+                        <p><strong>P </strong><a href="tel:02555555">(02) 5555 5555</a><strong><br>E </strong><a href="mailto:mail@yourdomain.com.au">mail@yourdomain.com.au</a></p>
+                        <p><strong>Practice Areas:</strong>
+                            {% for i in (1..5) %}
+                                <a href="#">{{ "Lorem Ipsum" }}</a>,
+                            {% endfor %}
+                        </p>
+
                     </div> <!-- .medium-9 -->
 
                 </div> <!-- .row -->
                 <hr>
             </article>
-            {% endfor %}
+
+            {{ content | markdo}}
 
         </main>
     </div>
