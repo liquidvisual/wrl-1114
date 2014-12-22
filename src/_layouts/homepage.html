@@ -33,14 +33,26 @@ slide_show: true
         	<main class="main">
                 <div class="row" data-equalizer>
 
-                    <div class="large-4 columns">
+                    <div class="large-4 columns show-for-medium-up">
                         <h4>{{ settings.title }}</h4>
                         <div class="media-tile" data-equalizer-watch>
                             {{ content }}
                         </div>
                     </div>
 
-                    <div class="large-4 columns">
+                    <div class="large-4 large-push-4 columns">
+                        <h4>Our Legal Services</h4>
+                        <div class="media-tile" data-equalizer-watch>
+                            <ul>
+                                {% for item in sitemap[2].children %}
+                                <li><a href="{{ item.url }}">{{ item.title }}</a></li>
+                                {% endfor %}
+                            </ul>
+                            <p><a href="/contact-us/"></a><img src="/img/template/need-advice.jpg" alt="Need Advice?"></p>
+                        </div> <!-- .media-tile -->
+                    </div>
+
+                    <div class="large-4 large-pull-4 columns">
                         <h4>Latest Legal News</h4>
                         <div class="media-tile" data-equalizer-watch>
                             <ul class="no-bullet">
@@ -54,18 +66,7 @@ slide_show: true
                         </div>
                     </div>
 
-                    <div class="large-4 columns">
-                        <h4>Our Legal Services</h4>
-                        <div class="media-tile" data-equalizer-watch>
-                            <ul>
-                                {% for item in sitemap[2].children %}
-                                <li><a href="{{ item.url }}">{{ item.title }}</a></li>
-                                {% endfor %}
-                            </ul>
-                            <p><a href="/contact-us/"></a><img src="/img/template/need-advice.jpg" alt="Need Advice?"></p>
-                        </div> <!-- .media-tile -->
-                    </div>
-                </div>
+                </div> <!-- .row -->
 
            </main>
         </div> <!-- .white-page -->
